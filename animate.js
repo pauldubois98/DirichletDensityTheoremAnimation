@@ -33,12 +33,13 @@ if(typeof n === 'undefined'){
 function choose(){
     console.log('Choose n');
     document.getElementById("animation").style.display = "none";
+    document.getElementById("case_title").innerHTML = "Choose Case";
 }
 
 
 function animate(n){
     document.getElementById("case_selection").style.display = "none";
-    document.getElementById("case_title").innerHTML += n;
+    document.getElementById("case_title").innerHTML = "Case Modulo "+n;
     console.log("Animate", n, typeof n);
 
     // get element
@@ -74,10 +75,10 @@ function animate(n){
 
 function update(){
     for(var i=0; i<n; i++){
-        let x = primes_abs[i]/indice
-        primes_rel[i] = Math.round(x*1000)/10;
+        primes_rel[i] = primes_abs[i]/indice;
         document.getElementById("primes_abs_"+String(i+1)).textContent = String(primes_abs[i]);
-        document.getElementById("primes_rel_"+String(i+1)).textContent = String(primes_rel[i]);
+        document.getElementById("primes_rel_"+String(i+1)).textContent = String(Math.round(primes_rel[i]*1000)/10);
+        
     }
 }
 
@@ -90,15 +91,13 @@ function next(){
     document.getElementById("prime_indice").textContent = String(indice);
     document.getElementById("prime").textContent = String(prime);
 
-    // console.log(indice,n);
-    // console.log(indice%n);
     
     primes_abs[prime%n]+=1
     update();
 
 
     if(indice<1000){
-        setTimeout(next, 1000);
+        setTimeout(next, 10);
     }
 }
 

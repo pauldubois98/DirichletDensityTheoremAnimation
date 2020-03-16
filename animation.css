@@ -1,17 +1,50 @@
-body{
+header{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 h1{
+    font-size: 3em;
     text-align: center;
     color: red;
 }
 h2{
+    font-size: 2.5em;
     text-align: center;
     color: orange;
 }
 
+
+/* **************************** form ***************************** */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+#lunch{
+    color: whitesmoke;
+    background-color: rebeccapurple;
+    margin: 2em;
+    
+    /* btn */
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+
+
+/**************************** animation ************************** */
+/* table */
 th,td{
     /* border: 1px black solid; */
     margin: 0;

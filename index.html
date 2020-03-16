@@ -14,17 +14,17 @@
 <body>
     <header>
         <h1>Dirichlet Density Theorem</h1>
-        <h2 id="case_title">Case Modulo </h2>
+        <h2 id="case_title"></h2>
     </header>
 
     <div id="case_selection">
-        <form action="" method="get" class="form-example">
-            <div class="form-example">
+        <form action="" method="get" class="form-choose-case">
+            <div class="form-choose-case">
                 <label for="n">Animation for:</label>
                 <input type="number" name="n" id="n" required>
             </div>
-            <div class="form-example">
-                <input type="submit" value="Lunch!">
+            <div class="form-choose-case">
+                <input type="submit" value="Lunch!" id="lunch">
             </div>
         </form>
     </div>
@@ -32,8 +32,8 @@
     <div id="animation">
         <p>Prime indice: <span id="prime_indice"></span></p>
         <p>Prime: <span id="prime"></span></p>
-        <table id="maintable">
-        </table>
+        <table id="maintable"></table>
+        <div id="bars"></div>
     </div>
 
 
