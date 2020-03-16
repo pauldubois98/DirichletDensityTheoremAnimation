@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    color: red;
+}
+h2{
+    text-align: center;
+    color: orange;
+}
+
+th,td{
+    /* border: 1px black solid; */
+    margin: 0;
+    min-width: 2em;
+    text-align: center;
+    border-right: solid 2px;  
+    border-bottom: solid 1px;  
+}

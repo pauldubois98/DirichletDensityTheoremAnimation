@@ -13,13 +13,14 @@
 
 <body>
     <header>
-        <h1 id="title">(Live) Dirichlet Density Theorem</h1>
+        <h1>Dirichlet Density Theorem</h1>
+        <h2 id="case_title">Case Modulo </h2>
     </header>
 
     <div id="case_selection">
         <form action="" method="get" class="form-example">
             <div class="form-example">
-                <label for="email">Dirichlet Density Theorem For:</label>
+                <label for="n">Animation for:</label>
                 <input type="number" name="n" id="n" required>
             </div>
             <div class="form-example">
@@ -29,7 +30,10 @@
     </div>
 
     <div id="animation">
-        wesh
+        <p>Prime indice: <span id="prime_indice"></span></p>
+        <p>Prime: <span id="prime"></span></p>
+        <table id="maintable">
+        </table>
     </div>
 
 
