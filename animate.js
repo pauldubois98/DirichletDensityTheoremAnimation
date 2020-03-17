@@ -23,10 +23,10 @@ if(typeof n === 'undefined'){
     } else{
         if(n>25){
             alert("The value for n enterd isn't recomended.");
+            document.getElementById("animation").style.display="block"
         }
         animate(n);
     }
-    
 }
 
 
@@ -67,22 +67,12 @@ function animate(n){
     // bars
     text += "<tr><td></td>";
     for(var i=0; i<n; i++){
-        text += '<td><div class="bar" id="bar_'+String(i)+'">'+"</div></td>";
+        text += '<td class="top"><div class="full"><div class="bar" id="bar_'+String(i)+'">'+"</div></div></td>";
         primes_rel.push(0);
     }
     text += "</tr></tbody>";
     // add changes
     table.innerHTML = text;
-
-    // // get element
-    // let bars = document.getElementById("bars");
-    // var text = "";
-    // // add bars
-    // for(var i=0; i<n; i++){
-    //     text += '<div class="bar" id="bar_'+String(i)+'">'+"</div>";
-    // }
-    // // add changes
-    // bars.innerHTML = text;
 
     setTimeout(next, 1000);
 

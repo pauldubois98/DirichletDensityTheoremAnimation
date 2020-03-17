@@ -44,6 +44,11 @@ form{
 
 
 /**************************** animation ************************** */
+#animation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* table */
 th,td{
     /* border: 1px black solid; */
@@ -62,5 +67,13 @@ th,td{
 }
 .bar{
     width: 25px;
-    background-color: teal;
+    background-color: rebeccapurple;
+    display: block;
+    margin: auto;
+}
+.full{
+    display: block;
+    width: 25px;
+    height: 300px;
+    margin: auto;
 }
