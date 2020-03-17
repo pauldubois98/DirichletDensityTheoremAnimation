@@ -50,6 +50,17 @@ th,td{
     margin: 0;
     min-width: 2em;
     text-align: center;
-    border-right: solid 2px;  
-    border-bottom: solid 1px;  
+    /* border-right: solid 2px;  
+    border-bottom: solid 1px;   */
+}
+
+
+
+/* bars */
+#bars{
+    display: flex;
+}
+.bar{
+    width: 25px;
+    background-color: teal;
 }

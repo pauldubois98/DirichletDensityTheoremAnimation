@@ -54,19 +54,35 @@ function animate(n){
     // # primes
     text += "<tbody><tr><td>primes (#)</td>";
     for(var i=0; i<n; i++){
-        text += '<td id="primes_abs_'+String(i+1)+'">'+String(0)+"</td>";
+        text += '<td id="primes_abs_'+String(i)+'">'+String(0)+"</td>";
         primes_abs.push(0);
     }
     text += "</tr>";
     // % primes
     text += "<tr><td>primes (%)</td>";
     for(var i=0; i<n; i++){
-        text += '<td id="primes_rel_'+String(i+1)+'">'+String(0)+"</td>";
+        text += '<td id="primes_rel_'+String(i)+'">'+String(0)+"</td>";
+        primes_rel.push(0);
+    }
+    // bars
+    text += "<tr><td></td>";
+    for(var i=0; i<n; i++){
+        text += '<td><div class="bar" id="bar_'+String(i)+'">'+"</div></td>";
         primes_rel.push(0);
     }
     text += "</tr></tbody>";
     // add changes
     table.innerHTML = text;
+
+    // // get element
+    // let bars = document.getElementById("bars");
+    // var text = "";
+    // // add bars
+    // for(var i=0; i<n; i++){
+    //     text += '<div class="bar" id="bar_'+String(i)+'">'+"</div>";
+    // }
+    // // add changes
+    // bars.innerHTML = text;
 
     setTimeout(next, 1000);
 
@@ -76,9 +92,9 @@ function animate(n){
 function update(){
     for(var i=0; i<n; i++){
         primes_rel[i] = primes_abs[i]/indice;
-        document.getElementById("primes_abs_"+String(i+1)).textContent = String(primes_abs[i]);
-        document.getElementById("primes_rel_"+String(i+1)).textContent = String(Math.round(primes_rel[i]*1000)/10);
-        
+        document.getElementById("primes_abs_"+String(i)).textContent = String(primes_abs[i]);
+        document.getElementById("primes_rel_"+String(i)).textContent = String(Math.round(primes_rel[i]*1000)/10);
+        document.getElementById("bar_"+String(i)).style.height = String(primes_rel[i]*300)+"px"; 
     }
 }
 
@@ -96,8 +112,20 @@ function next(){
     update();
 
 
-    if(indice<1000){
+    if(indice<10){
+        setTimeout(next, 1000);
+    }else if(indice<20){
+        setTimeout(next, 500);
+    }else if(indice<50){
+        setTimeout(next, 200);
+    }else if(indice<100){
+        setTimeout(next, 100);
+    }else if(indice<1000){
+        setTimeout(next, 50);
+    }else if(indice<10000){
         setTimeout(next, 10);
+    }else if(indice<100000){
+        setTimeout(next, 1);
     }
 }
 
